@@ -1,8 +1,8 @@
 var search = document.querySelector("#search-container")
 var inputBar = document.querySelector("#search-bar")
+var key = `1`
 
-
-const fetchUrl ="https://thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
+const fetchUrl ="www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
 
 fetch(fetchUrl)
  .then(function(response){
@@ -36,4 +36,14 @@ cancelBtn.addEventListener("click", () => {
 });
 faveBTn.addEventListener("click", () => {
     // add drink data to local storage here 
+    fetch(fetchURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+
+        }
+        
+        )
+    }
 });
