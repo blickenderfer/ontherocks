@@ -11,4 +11,21 @@ fetch(fetchUrl)
 .then(function(data){
     console.log(data);
 })
- 
+
+
+/*modal script*/
+var searchBtn = document.querySelector("#search");
+var closeBtn = document.querySelector("#close-button");
+var modal = document.querySelector(".modal");
+var modalBg = document.querySelector(".modal-background");
+
+
+searchBtn.addEventListener("click", () => {
+    modal.classList.add("is-active");
+});
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("is-active");
+});
+modalBg.addEventListener("click", () => {
+    modal.classList.remove("is-active");
+});
