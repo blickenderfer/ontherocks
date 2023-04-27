@@ -18,9 +18,11 @@ var searchBtn = document.querySelector("#search");
 var closeBtn = document.querySelector("#close-button");
 var modal = document.querySelector(".modal");
 var modalBg = document.querySelector(".modal-background");
+var cancelBtn = document.querySelector("#cancel");
+var faveBtn = document.querySelector("#fave-button")
 
-
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", (event) => {
+    event.preventDefault();
     modal.classList.add("is-active");
 });
 closeBtn.addEventListener("click", () => {
@@ -28,4 +30,10 @@ closeBtn.addEventListener("click", () => {
 });
 modalBg.addEventListener("click", () => {
     modal.classList.remove("is-active");
+});
+cancelBtn.addEventListener("click", () => {
+    modal.classList.remove("is-active");
+});
+faveBTn.addEventListener("click", () => {
+    // add drink data to local storage here 
 });
