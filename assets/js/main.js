@@ -2,14 +2,14 @@ var search = document.querySelector("#search-container")
 var inputBar = document.querySelector("#search-bar")
 
 
-const fetchUrl ="https://thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
+const fetchUrl ="https://thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
 
 fetch(fetchUrl)
  .then(function(response){
     return response.json();
  })
 .then(function(data){
-    console.log(data);
+    console.log(data.drinks);
 })
 
 
