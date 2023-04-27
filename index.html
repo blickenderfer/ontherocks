@@ -29,15 +29,6 @@
         <!-- grid of drink images with their names, and a link to the alphabetical search at the bottom of the page   -->
     </div>
 
-    <div class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <!-- Modal holding drink information -->
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-      </div>
-
-
     <div class="searchabc-container">
         <h2>Search for drink alphabetically</h2>
         <div class="searchabc">
@@ -45,6 +36,25 @@
         </div>
     </div>
 
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Drink name here</p>
+            <button id="close-button" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+          <img id="drink-img" src="" alt=""/>  
+          <p class="drink description">
+            drink description here
+          </p>  
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success">Add to Favorites</button>
+            <button class="button">Cancel</button>
+          </footer>
+        </div>
+      </div>
 
     </main>
     <script src="./assets/js/main.js"></script>
