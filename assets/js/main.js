@@ -49,16 +49,10 @@ modalBg.addEventListener("click", () => {
 cancelBtn.addEventListener("click", () => {
     modal.classList.remove("is-active");
 });
-// faveBTn.addEventListener("click", () => {
-//     // add drink data to local storage here 
-//     fetch(fetchURL)
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (data) {
 
-//         }
-        
-//         )
-//     }
-// });
+
+
+/*script for conversation generator box*/
+var generateBtn = document.querySelector(".generate");
+var factContainer = document.querySelector(".fact-container");
+
