@@ -21,21 +21,12 @@
         <form id="form-container">
             <label form="search">Search</label>
             <input type="search" id="search-bar" name="search">
-            <button type="search">Search</button>
+            <button type="search" id="search">Search</button>
         </form>
     
     <div class="drink-grid">
         <!-- grid of drink images with their names, and a link to the alphabetical search at the bottom of the page   -->
     </div>
-
-    <div class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <!-- Modal holding drink information -->
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-      </div>
-
 
     <div class="searchabc-container">
         <h2>Search for drink alphabetically</h2>
@@ -43,20 +34,24 @@
             <h3>Search by...A B C etc.</h3>
         </div>
     </div>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+<!-- modal below  -->
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Drink name here</p>
+            <button id="close-button" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+          <img id="drink-img" src="" alt=""/>  
+          <p class="drink description">
+            drink description here
+          </p>  
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success" id="fave-button">Add to Favorites</button>
+            <button class="button" id="cancel">Cancel</button>
+          </footer>
         </div>
       </div>
 
