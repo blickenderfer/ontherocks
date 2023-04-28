@@ -1,8 +1,60 @@
 body{
-    background-color:aquamarine;
+    background: rgb(21,7,80);
+background: radial-gradient(circle, rgba(21,7,80,1) 0%, rgba(163,64,36,1) 58%, rgba(231,91,15,1) 76%, rgba(255,252,0,1) 100%);
 }
 
-header{
-    justify-content: center;
+h1{
+    color: black;
+    
+    font-size: 80px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bold;
+    font-style: italic;
+    
 }
 
+img{
+    width: 100%;
+    display: flex;
+   
+}
+.favorites-btn{
+    padding:6px;
+    margin:12px;
+    background-color: rgba(57, 48, 107, 0.897);
+    width: 120px;
+    height: 100px;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+}
+.searchabc-container{
+    padding:8px;
+    margin: 12px;
+    background-color: rgb(223, 121, 25);
+    color:black;
+}
+p{
+    color:black;
+    font-size: 32px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.drink-grid{
+    background-color:rgb(223, 121, 25);
+
+}
+#form-container{
+    padding:22px;
+    background-color: rgb(57, 48, 107, 0.897);
+    height:100px;
+    color:black;
+    font-size: 26px;
+}
+#search-bar{
+ background-color: lightgray;
+ height: 30px;
+ width: 200px;
+ border-radius: 10px;
+}
