@@ -41,10 +41,6 @@ p{
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
 }
-.drink-grid{
-    background-color:rgb(223, 121, 25);
-
-}
 #form-container{
     padding:22px;
     background-color: rgb(57, 48, 107, 0.897);
@@ -57,4 +53,11 @@ p{
  height: 30px;
  width: 200px;
  border-radius: 10px;
+}
+#search{
+    background-color: rgb(255, 174, 0);
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+
 }
