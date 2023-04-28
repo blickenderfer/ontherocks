@@ -2,15 +2,15 @@ var search = document.querySelector("#search-container")
 var inputBar = document.querySelector("#search-bar")
 var key = `1`
 
-const fetchUrl ="www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+const fetchUrl ="https://thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
 
-fetch(fetchUrl)
- .then(function(response){
-    return response.json();
- })
-.then(function(data){
-    console.log(data);
-})
+// fetch(fetchUrl)
+//  .then(function(response){
+//     return response.json();
+//  })
+// .then(function(data){
+//     console.log(data.drinks);
+// })
 
 
 /*modal script*/
@@ -24,6 +24,21 @@ var faveBtn = document.querySelector("#fave-button")
 searchBtn.addEventListener("click", (event) => {
     event.preventDefault();
     modal.classList.add("is-active");
+    var modalTitle = document.querySelector(".modal-card-title");
+    var searchDrink = document.querySelector("#search-bar").value;
+    console.log(searchDrink);
+    let fetchUrl =`https://thecocktaildb.com/api/json/v1/1/search.php?s=${searchDrink}`
+    fetch(fetchUrl)
+ .then(function(response){
+    return response.json();
+ })
+.then(function(data){
+    console.log(data.drinks);
+    modalTitle.textContent=data.drinks[0].strDrink;
+    var drinkImg = document.querySelector("#drink-img"); 
+    drinkImg.src=data.drinks[0].strDrinkThumb;
+    //make a loop to check if a particular ingredient is null in order to include it 
+})
 });
 closeBtn.addEventListener("click", () => {
     modal.classList.remove("is-active");
@@ -34,16 +49,16 @@ modalBg.addEventListener("click", () => {
 cancelBtn.addEventListener("click", () => {
     modal.classList.remove("is-active");
 });
-faveBTn.addEventListener("click", () => {
-    // add drink data to local storage here 
-    fetch(fetchURL)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
+// faveBTn.addEventListener("click", () => {
+//     // add drink data to local storage here 
+//     fetch(fetchURL)
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (data) {
 
-        }
+//         }
         
-        )
-    }
-});
+//         )
+//     }
+// });
