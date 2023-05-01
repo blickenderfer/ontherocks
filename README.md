@@ -8,7 +8,7 @@ This goal of this project was to create a website that is easy to navigate and u
 ## Table of Contents
 - [Installation](#installation) -- No install necessary
 - [Usage](#Usage) -- Open in browser
-- [URL]()
+- [URL](https://blickenderfer.github.io/ontherocks/)
 - [Screenshots](#screenshot) -- See below
 - [Credits](#Credits) -- Emma Claire Blickenderfer, Amanda Whitley, Joseph Pham, Amir Jones
 - [License](#license) MIT license
@@ -22,7 +22,7 @@ No install necessary
 Open in Browser. 
 
 ## URL
-
+https://blickenderfer.github.io/ontherocks/
 
 ## Screenshot
 ![screenshot]
@@ -33,7 +33,7 @@ N/A
 ## License
 MIT license
 
-Copyright (c) 2023 "xxx"
+Copyright (c) 2023 "Emma Claire Blickenderfer, Amanda Whitley, Joseph Pham, Amir Jones"
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

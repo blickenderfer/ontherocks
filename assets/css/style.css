@@ -21,6 +21,8 @@ img{
 .favorites-btn{
     padding:6px;
     margin:12px;
+    color: white;
+    /* text-shadow: 2px 2px 3px grey; */
     background-color: rgba(57, 48, 107, 0.897);
     width: 120px;
     height: 100px;
@@ -36,17 +38,19 @@ img{
     color:black;
 }
 p{
-    color:black;
-    text-shadow: 6px 4px 4px white;
+    color:white;
+    text-shadow: 2px 2px 3px grey;
     font-size: 32px;
     font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-weight: bolder;
 }
 #form-container{
+    text-shadow: 2px 2px 3px grey;
+
     padding:22px;
     background-color: rgb(57, 48, 107, 0.897);
     height:100px;
-    color:black;
+    color:white;
     font-size: 26px;
 }
 #search-bar{
@@ -56,9 +60,9 @@ p{
  border-radius: 10px;
 }
 #search{
-    background-color: rgb(255, 174, 0);
+    background-color: rgb(223, 121, 25);
+    font-weight: bold;
     height: 30px;
     width: 80px;
     border-radius: 10px;
-
 }
