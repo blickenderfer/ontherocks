@@ -2,7 +2,7 @@ var search = document.querySelector("#search-container")
 var inputBar = document.querySelector("#search-bar")
 var key = `1`
 var factEl = document.querySelector("#fact");
-
+var descriptionEl = document.querySelector(".modal .drink-description");
 const fetchUrl = "https://thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
 
 // fetch(fetchUrl)
@@ -49,6 +49,11 @@ searchBtn.addEventListener("click", (event) => {
                     return;
                 } else {
                     ingredients.push(ingredient);
+                    var descriptionP = document.createElement("p")
+                    descriptionP.textContent = ingredient;
+                    descriptionEl.appendChild(descriptionP);
+                
+                   
                 }
             }
             console.log(ingredients);
