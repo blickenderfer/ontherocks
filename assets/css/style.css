@@ -66,3 +66,6 @@ p{
     width: 80px;
     border-radius: 10px;
 }
+.modal-card-body{
+    background-color: rgb(76, 9, 163);
+}
