@@ -5,7 +5,7 @@ background: radial-gradient(circle, rgba(21,7,80,1) 0%, rgba(163,64,36,1) 58%, r
 
 h1{
     color: black;
-    
+    text-shadow: 6px 4px 4px white;
     font-size: 80px;
     font-family:'Courier New', Courier, monospace;
     font-weight:bold;
@@ -37,13 +37,10 @@ img{
 }
 p{
     color:black;
+    text-shadow: 6px 4px 4px white;
     font-size: 32px;
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
-}
-.drink-grid{
-    background-color:rgb(223, 121, 25);
-
 }
 #form-container{
     padding:22px;
@@ -57,4 +54,11 @@ p{
  height: 30px;
  width: 200px;
  border-radius: 10px;
+}
+#search{
+    background-color: rgb(255, 174, 0);
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+
 }
