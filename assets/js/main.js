@@ -3,6 +3,9 @@ var inputBar = document.querySelector("#search-bar")
 var key = `1`
 var factEl = document.querySelector("#fact");
 var descriptionEl = document.querySelector(".drink-modal .drink-description");
+
+var favorites = []
+
 const fetchUrl = "https://thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
 
 
@@ -28,6 +31,8 @@ searchBtn.addEventListener("click", (event) => {
         .then(function (data) {
             console.log(data.drinks);
             var topResult = data.drinks[0]
+            var drinkName = data.drinks[0].strDrink;
+            document.querySelector(".fave-button").dataset.drink = drinkName;
             modalTitle.textContent = data.drinks[0].strDrink;
             var drinkImg = document.querySelector("#drink-img");
             drinkImg.src = data.drinks[0].strDrinkThumb;
@@ -60,15 +65,27 @@ cancelBtn.addEventListener("click", () => {
 
 
 /*adding to favorites*/
-// faveBtn.addEventListener("click", () => {
-//     function saveDrink(){
-//     var key = saveDrink.id;
-//     var drinkData = 
-//     window.localStorage.setItem(key, drinkData);        
-//     }        
-//     saveDrink();
-// })
-    //drink data --> setitem for local storage and then getitem
+
+modal.addEventListener("click", (event) => {
+    console.log(event.target);
+    if (event.target.matches(".fave-button")){
+        console.log("click fave");
+        favorites.push(event.target.dataset.drink);
+        localStorage.setItem("favoriteDrinks", JSON.stringify(favorites));
+    }
+   
+})
+function init() {
+    // gets data from localstorage if available
+    var favTemp = localStorage.getItem("favoriteDrinks");
+    if (favTemp) { // if exists
+      favorites = JSON.parse(favTemp);
+    }
+    // renderFavorites();
+  }
+  
+  init();
+  
 
 
 /*script for conversation generator box*/
@@ -85,6 +102,7 @@ generateBtn.addEventListener("click", (event) => {
             console.log(data.text);
             factEl.textContent = data.text;
         })
+
     })
 
 var imgBtn = document.querySelectorAll(".searchImg")
@@ -128,4 +146,6 @@ function imgSearch(searchDrink){
             }
             console.log(ingredients);
         })
-}   
+
+    });
+
