@@ -144,3 +144,13 @@ h3{
     color:black;
     font-weight: bold;
 }
+#addFave{
+    background-color: goldenrod;
+    color:black;
+
+}
+#close-button{
+    background-color:grey;
+    border-radius: 10px;
+    
+}
