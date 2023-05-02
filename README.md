@@ -2,7 +2,7 @@
 
 
 ## Desciption
-This goal of this project was to create a website that is easy to navigate and user friendly, that allows the user to search for a drink with it's ingredients by category of liquor, name of ingredient, or alphabetically. When the user click on the drink of their choice, a modal pops up with information about the drink and how to make it and a picture. Also, there is an "Ice Breaker" button that serves as a conversation starter. A user can click the button and a randomly generated conversation topic is displayed. 
+This goal of this project was to create a website that is easy to navigate and user friendly, that allows the user to search for a drink with it's ingredients by category of liquor, name of ingredient, or alphabetically. When the user clicks on the drink of their choice, a modal pops up with information about the drink and how to make it and a picture. Also, there is an "Ice Breaker" button that serves as a conversation starter. A user can click the button and a randomly generated conversation topic is displayed. 
 
 
 ## Table of Contents
@@ -13,10 +13,8 @@ This goal of this project was to create a website that is easy to navigate and u
 - [Credits](#Credits) -- Emma Claire Blickenderfer, Amanda Whitley, Joseph Pham, Amir Jones
 - [License](#license) MIT license
 
-
 ## Installation
 No install necessary
-
 
 ## Usage
 Open in Browser. 
@@ -28,7 +26,7 @@ https://blickenderfer.github.io/ontherocks/
 ![screenshot]
 
 ## Credits
-N/A
+Emma Claire Blickenderfer, Amanda Whitley, Joseph Pham, Amir Jones
 
 ## License
 MIT license

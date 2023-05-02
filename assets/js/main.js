@@ -85,4 +85,4 @@ generateBtn.addEventListener("click", (event) => {
             console.log(data.text);
             factEl.textContent = data.text;
         })
-    })
+    });
