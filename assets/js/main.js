@@ -15,7 +15,11 @@ var closeBtn = document.querySelector("#close-button");
 var modal = document.querySelector(".modal");
 var modalBg = document.querySelector(".modal-background");
 var cancelBtn = document.querySelector("#cancel");
+
 var faveBtn = document.querySelector(".fave-button");
+
+var faveBtn = document.querySelector("#fave-button"); 
+
 
 searchBtn.addEventListener("click", (event) => {
     event.preventDefault();
