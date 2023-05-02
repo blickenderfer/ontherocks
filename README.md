@@ -23,6 +23,7 @@ Open in Browser.
 https://blickenderfer.github.io/ontherocks/
 
 ## Screenshot
+![screenshot](./assets/images/OTRsnap.JPG)
 ![screenshot]
 
 ## Credits
