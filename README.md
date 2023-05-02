@@ -2,7 +2,7 @@
 
 
 ## Desciption
-This goal of this project was to create a website that is easy to navigate and user friendly, that allows the user to search for a drink with it's ingredients by category of liquor, name of ingredient, or alphabetically. When the user clicks on the drink of their choice, a modal pops up with information about the drink and how to make it and a picture. Also, there is an "Ice Breaker" button that serves as a conversation starter. A user can click the button and a randomly generated conversation topic is displayed. 
+This goal of this project was to create a website that is easy to navigate and user friendly, that allows the user to search for a drink with it's ingredients by category of liquor, or name of ingredient. When the user clicks on the drink of their choice, a modal pops up with ingredients and a picture. Also, there is an "Ice Breaker" button that serves as a conversation starter. A user can click the button and a randomly generated conversation topic is displayed. 
 
 
 ## Table of Contents
@@ -23,6 +23,7 @@ Open in Browser.
 https://blickenderfer.github.io/ontherocks/
 
 ## Screenshot
+![screenshot](./assets/images/OTRsnap.JPG)
 ![screenshot]
 
 ## Credits
