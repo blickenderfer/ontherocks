@@ -94,7 +94,9 @@ img{
     background-color:rgb(76, 9, 163) ;
 }
 .drink-grid{
-    justify-content: center;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
     
 }
 
