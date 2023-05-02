@@ -1,13 +1,18 @@
+*{
+    font-family: 'Murecho', sans-serif;
+}
+
+
 body{
     background: rgb(21,7,80);
-background: radial-gradient(circle, rgba(21,7,80,1) 0%, rgba(163,64,36,1) 58%, rgba(231,91,15,1) 76%, rgba(255,252,0,1) 100%);
+/* background: radial-gradient(circle, rgba(21,7,80,1) 0%, rgba(163,64,36,1) 58%, rgba(231,91,15,1) 76%, rgba(255,252,0,1) 100%); */
 }
 
 h1{
-    color: black;
-    text-shadow: 6px 4px 4px white;
+    color: white;
+    text-shadow: 2px 4px 4px grey;
     font-size: 80px;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Murecho', sans-serif;
     font-weight:bold;
     font-style: italic;
     
@@ -23,31 +28,35 @@ h1{
     margin:12px;
     color: white;
     /* text-shadow: 2px 2px 3px grey; */
-    background-color: rgba(57, 48, 107, 0.897);
+    background-color: rgba(75, 53, 194, 0.897);
     width: 120px;
     height: 100px;
     border-radius: 100px;
     font-size: 20px;
     font-weight: bold;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Murecho', sans-serif;
 }
 .searchabc-container{
     padding:8px;
     margin: 12px;
-    background-color: rgb(223, 121, 25);
+    background-color: rgba(75, 53, 194, 0.897);
     color:black;
+    font-size: 30px;
+    font-weight: bold;
+
 }
 p{
+    padding: 6px;
+    margin:6px;
     color:white;
     text-shadow: 2px 2px 3px grey;
     font-size: 32px;
-    font-family:'Courier New', Courier, monospace;
     font-weight: bolder;
 }
 #form-container{
     text-shadow: 2px 2px 3px grey;
     padding:22px;
-    background-color: rgb(57, 48, 107, 0.897);
+    background-color: rgba(75, 53, 194, 0.897);
     height:100px;
     color:white;
     font-size: 26px;
@@ -59,7 +68,7 @@ p{
  border-radius: 10px;
 }
 #search{
-    background-color: rgb(223, 121, 25);
+    background-color: rgba(75, 53, 194, 0.897);
     font-weight: bold;
     height: 30px;
     width: 80px;
@@ -100,4 +109,24 @@ img{
 
 .flex-column{
     justify-content: space-between;
+}
+h3{
+    font-size: 1.70rem;
+    color: white;
+    padding-left: 18px;
+    padding-top: 18px;
+
+}
+.notification{
+    color: white;
+    font-size: 48px;
+
+    background-color: rgba(23, 9, 49, 0.877);
+}
+#generate{
+    background-color: rgb(0, 150, 196);
+    height:3rem;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: large;
 }
