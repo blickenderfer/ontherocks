@@ -2,7 +2,7 @@ var search = document.querySelector("#search-container")
 var inputBar = document.querySelector("#search-bar")
 var key = `1`
 var factEl = document.querySelector("#fact");
-var descriptionEl = document.querySelector(".drink-modal .drink-description");
+var descriptionEl = document.querySelector(".drink-description");
 
 var favorites = []
 
