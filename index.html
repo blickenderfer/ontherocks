@@ -1,70 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>On the Rocks</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1> On the Rocks</h1>
-        <img src="./assets/images/OTR-banner.jpg" alt="cocktail app header pic">
-        <p> On the Rocks lets you find your perfect drink for any occasion!</p>
+      <h1>On the Rocks</h1>
+      <img class="banner" src="./assets/images/OTR-banner.jpg" alt="cocktail app header pic" />
+      <p>On the Rocks lets you find your perfect drink for any occasion</p>
     </header>
     <main>
-        <button class="favorites-btn">My Favorites</button>
-        <form id="form-container">
-            <label form="search">Search</label>
-            <input type="search" id="search-bar" name="search">
-            <button type="search" id="search">Search</button>
-        </form>
-    
-    <div class="drink-grid">
-      <div class="drink-item">
-        <a href="#">
-          <img src="" alt="Drink 1">
-          <h3>Drink 1</h3>
-        </a>
-      </div>
-      <div class="drink-item">
-        <a href="#">
-          <img src="" alt="Drink 2">
-          <h3>Drink 2</h3>
-        </a>
-      </div>
-      <div class="drink-item">
-        <a href="#">
-          <img src="" alt="Drink 3">
-          <h3>Drink 3</h3>
-        </a>
-      </div>
-      <div class="drink-item">
-        <a href="#">
-          <img src="" alt="Drink 4">
-          <h3>Drink 4</h3>
-        </a>
-      </div>
-      <div class="drink-item">
-        <a href="#">
-          <img src="" alt="Drink 5">
-          <h3>Drink 5</h3>
-        </a>
-      </div>
-      <div class="drink-item">
-        <a href="#">
-          <img src="" alt="Drink 6">
-          <h3>Drink 6</h3>
-        </a>
-      </div>
-       
-    </div>
+      <button class="favorites-btn">My Favorites</button>
+      <form id="form-container">
+        <label form="search">Search</label>
+        <input type="search" id="search-bar" name="search" />
+        <button type="search" id="search">Search</button>
+      </form>
 
-    <div class="searchabc-container">
+      <div class="drink-grid">
+        <a href="#" class="drink-link">
+          <img src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg" alt="Margarita">
+          <h3>Margarita</h3>
+        </a>
+        <a href="#" class="drink-link">
+          <img src="https://www.thecocktaildb.com/images/media/drink/kpsajh1504368362.jpghttps://www.thecocktaildb.com/images/media/drink/kpsajh1504368362.jpg" alt="Cosmopolitan">
+          <h3>Cosmopolitan</h3>
+        </a>
+        <a href="#" class="drink-link">
+          <img src="https://www.thecocktaildb.com/images/media/drink/rxtqps1478251029.jpg" alt="Mojito">
+          <h3>Mojito</h3>
+        </a>
+        <a href="#" class="drink-link">
+          <img src="https://www.thecocktaildb.com/images/media/drink/71t8581504353095.jpg" alt="Martini">
+          <h3>Martini</h3>
+        </a>
+        <a href="#" class="drink-link">
+          <img src="https://www.thecocktaildb.com/images/media/drink/mrz9091589574515.jpg" alt="daiquiri">
+          <h3>Daiquiri</h3>
+        </a>
+        <a href="#" class="drink-link">
+          <img src="https://www.thecocktaildb.com/images/media/drink/qgdu971561574065.jpg" alt="Negroni">
+          <h3>Negroni</h3>
+        </a>
+      </div>
+
+      <div class="searchabc-container">
         <h2>Search for drink alphabetically</h2>
         <div class="searchabc">
             <h3><a href = "https://www.thecocktaildb.com/browse.php?b=a">A</a>
@@ -95,19 +84,19 @@
                 <a href = "https://www.thecocktaildb.com/browse.php?b=z">Z</a>
             </h3>
         </div>
-    </div>
+      </div>
 
 
     <div class="fact-container">
       <div class="notification is-primary">
-        <h3 class="containerh3">At the bar and trapped in a dull conversation?</h3>
+        <h3 class="containerh3">Break The Ice</h3>
         <button type="button" id="generate">Generate Conversation Topic</button>
         <p id="fact"></p>
       </div>
     </div>
 
 
-    <div class="modal">
+      <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
           <header class="modal-card-head">
@@ -115,18 +104,18 @@
             <button id="close-button" aria-label="close"></button>
           </header>
           <section class="modal-card-body">
-          <img id="drink-img" src="" alt=""/>  
-          <div class="drink-description"></div>  
+            <img id="drink-img" src="" alt="" />
+            <div class="drink-description"></div>
           </section>
           <footer class="modal-card-foot">
-            <button class="button is-success" id="fave-button">Add to Favorites</button>
+            <button class="button is-success" id="fave-button">
+              Add to Favorites
+            </button>
             <button class="button" id="cancel">Cancel</button>
           </footer>
         </div>
       </div>
-
     </main>
     <script src="./assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>
