@@ -3,7 +3,7 @@ var inputBar = document.querySelector("#search-bar")
 var key = `1`
 var factEl = document.querySelector("#fact");
 var descriptionEl = document.querySelector(".drink-description");
-
+var favoritesBtn = document.querySelector(".favorites-btn");
 var favorites = []
 
 const fetchUrl = "https://thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
@@ -15,7 +15,11 @@ var closeBtn = document.querySelector("#close-button");
 var modal = document.querySelector(".modal");
 var modalBg = document.querySelector(".modal-background");
 var cancelBtn = document.querySelector("#cancel");
+
+var faveBtn = document.querySelector(".fave-button");
+
 var faveBtn = document.querySelector("#fave-button"); 
+
 
 searchBtn.addEventListener("click", (event) => {
     event.preventDefault();
@@ -37,6 +41,9 @@ searchBtn.addEventListener("click", (event) => {
             var drinkImg = document.querySelector("#drink-img");
             drinkImg.src = data.drinks[0].strDrinkThumb;
             var ingredients = []
+            var imageBox = document.querySelector(".image-box");
+            imageBox.innerHTML=""
+            descriptionEl.innerHTML = ""
             for (i = 1; i <= 15; i++) {
                 var currentIngredient = `strIngredient${i}`
                 var ingredient = topResult[currentIngredient];
@@ -73,21 +80,52 @@ modal.addEventListener("click", (event) => {
         favorites.push(event.target.dataset.drink);
         localStorage.setItem("favoriteDrinks", JSON.stringify(favorites));
     }
+    // renderFavorites();
 
 })
+
+favoritesBtn.addEventListener("click", (event) => {
+    event.preventDefault()
+    var imageBox = document.querySelector(".image-box");
+    imageBox.innerHTML=""
+    renderFavorites();
+}
+)
+
 function init() {
     // gets data from localstorage if available
     var favTemp = localStorage.getItem("favoriteDrinks");
     if (favTemp) { // if exists
         favorites = JSON.parse(favTemp);
     }
+    console.log(favorites);
     // renderFavorites();
 }
 
 init();
 
-
-
+function renderFavorites(){
+    modal.classList.add("is-active");
+    var modalTitle = document.querySelector(".modal-card-title");
+    modalTitle.textContent="My Favorites";
+    var modalBody = document.querySelector(".modal-card-body");
+    var imageBox = document.querySelector(".image-box");
+    for (var i=0; i<favorites.length; i++){
+        var drinkBtn = document.createElement("button");
+        drinkBtn.textContent=favorites[i];
+       
+        drinkBtn.addEventListener("click", (event) => {
+            console.log(drinkBtn.textContent);
+            imgSearch(drinkBtn.textContent);
+        } 
+        
+        )
+        imageBox.append(drinkBtn); 
+        //add event listener for each button
+    }
+    modalBody.append(imageBox);
+}
+//imgBox.innerHTML=""
 /*script for conversation generator box*/
 const generateBtn = document.querySelector("#generate");
 const factContainer = document.querySelector(".fact-container");
@@ -131,6 +169,9 @@ function imgSearch(searchDrink) {
             var drinkImg = document.querySelector("#drink-img");
             drinkImg.src = data.drinks[0].strDrinkThumb;
             var ingredients = []
+            var imageBox = document.querySelector(".image-box");
+            imageBox.innerHTML=""
+            descriptionEl.innerHTML = ""
             for (i = 1; i <= 15; i++) {
                 var currentIngredient = `strIngredient${i}`
                 var ingredient = topResult[currentIngredient];

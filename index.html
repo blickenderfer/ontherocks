@@ -24,44 +24,69 @@
     <main>
       <button class="favorites-btn">My Favorites</button>
       <form id="form-container">
-        <label form="search"></label>
+        <label form="search">What are you in the mood for?</label>
         <input type="search" id="search-bar" name="search" />
         <button type="search" id="search">Search</button>
       </form>
+
+    <div class = "columns is-multiline">
+      <div class="drink-grid" class="column is-4">
+
     
       <div class="drink-grid">
         <h3>Margarita</h3>
+
         <a href="#" class="drink-link">
           <img src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg" alt="Margarita" class="searchImg">
         </a>
+
+        <a href="#" class="drink-link" class="column is-4">
+
         <h3>Cosmopolitan</h3>
         <a href="#" class="drink-link">
+
           <img src="https://www.thecocktaildb.com/images/media/drink/kpsajh1504368362.jpg" alt="Cosmopolitan" class="searchImg">
           
         </a>
+
+        <a href="#" class="drink-link" class="column is-4">
+
         <h3>Mojito</h3>
         <a href="#" class="drink-link">
+
           <img src="https://www.thecocktaildb.com/images/media/drink/rxtqps1478251029.jpg" alt="Mojito" class="searchImg">
           
         </a>
+
+        <a href="#" class="drink-link" class="column is-4">
+
         <h3>Martini</h3>
         <a href="#" class="drink-link">
+
           <img src="https://www.thecocktaildb.com/images/media/drink/71t8581504353095.jpg" alt="Martini" class="searchImg">
           
         </a>
+
+        <a href="#" class="drink-link" class="column is-4">
+
         <h3>Daiquiri</h3>
         <a href="#" class="drink-link">
+
           <img src="https://www.thecocktaildb.com/images/media/drink/mrz9091589574515.jpg" alt="daiquiri" class="searchImg">
           
         </a>
+
+        <a href="#" class="drink-link" class="column is-4">
+
         <h3>Negroni</h3>
         <a href="#" class="drink-link">
+
           <img src="https://www.thecocktaildb.com/images/media/drink/qgdu971561574065.jpg" alt="Negroni" class="searchImg">
           
         </a>
       </div>
 
-      <div class="searchabc-container">
+      <!-- <div class="searchabc-container">
         <h2>Search for drink alphabetically</h2>
         <div class="searchabc">
             <h3><a href = "https://www.thecocktaildb.com/browse.php?b=a">A</a>
@@ -92,8 +117,8 @@
                 <a href = "https://www.thecocktaildb.com/browse.php?b=z">Z</a>
             </h3>
         </div>
-      </div>
-
+      </div> -->
+ 
 
     <div class="fact-container">
       <div class="notification">
@@ -109,15 +134,16 @@
         <div class="modal-card">
           <header class="modal-card-head">
             <p class="modal-card-title">Drink name here</p>
-            <button id="close-button" aria-label="close">X</button>
+            <button id="close-button" aria-label="close">x</button>
           </header>
           <section class="modal-card-body">
             <img id="drink-img" src="" alt="" />
             <div class="drink-description"></div>
+            <div class="image-box"></div>
           </section>
           <footer id="modal-card-foot">
 
-            <button class="button is-success fave-button">Add to Favorites</button>
+            <button id="addFave" class="button is-success fave-button">Add to Favorites</button>
 
             <button class="button" id="cancel">Cancel</button>
           </footer>
