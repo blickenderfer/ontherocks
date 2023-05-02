@@ -2,16 +2,9 @@ var search = document.querySelector("#search-container")
 var inputBar = document.querySelector("#search-bar")
 var key = `1`
 var factEl = document.querySelector("#fact");
-var descriptionEl = document.querySelector(".modal .drink-description");
+var descriptionEl = document.querySelector(".drink-modal .drink-description");
+var favorites = []
 const fetchUrl = "https://thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
-
-// fetch(fetchUrl)
-//  .then(function(response){
-//     return response.json();
-//  })
-// .then(function(data){
-//     console.log(data.drinks);
-// })
 
 
 /*modal script*/
@@ -20,7 +13,7 @@ var closeBtn = document.querySelector("#close-button");
 var modal = document.querySelector(".modal");
 var modalBg = document.querySelector(".modal-background");
 var cancelBtn = document.querySelector("#cancel");
-var faveBtn = document.querySelector("#fave-button")
+var faveBtn = document.querySelector("#fave-button");
 
 searchBtn.addEventListener("click", (event) => {
     event.preventDefault();
@@ -36,10 +29,11 @@ searchBtn.addEventListener("click", (event) => {
         .then(function (data) {
             console.log(data.drinks);
             var topResult = data.drinks[0]
+            var drinkName = data.drinks[0].strDrink;
+            document.querySelector(".fave-button").dataset.drink = drinkName;
             modalTitle.textContent = data.drinks[0].strDrink;
             var drinkImg = document.querySelector("#drink-img");
             drinkImg.src = data.drinks[0].strDrinkThumb;
-            //make a loop to check if a particular ingredient is null in order to include it 
             var ingredients = []
             for(i = 1; i <= 15; i++){
                 var currentIngredient = `strIngredient${i}`
@@ -51,9 +45,7 @@ searchBtn.addEventListener("click", (event) => {
                     ingredients.push(ingredient);
                     var descriptionP = document.createElement("p")
                     descriptionP.textContent = ingredient;
-                    descriptionEl.appendChild(descriptionP);
-                
-                   
+                    descriptionEl.appendChild(descriptionP);                  
                 }
             }
             console.log(ingredients);
@@ -70,6 +62,28 @@ cancelBtn.addEventListener("click", () => {
 });
 
 
+/*adding to favorites*/
+modal.addEventListener("click", (event) => {
+    console.log(event.target);
+    if (event.target.matches(".fave-button")){
+        console.log("click fave");
+        favorites.push(event.target.dataset.drink);
+        localStorage.setItem("favoriteDrinks", JSON.stringify(favorites));
+    }
+   
+})
+function init() {
+    // gets data from localstorage if available
+    var favTemp = localStorage.getItem("favoriteDrinks");
+    if (favTemp) { // if exists
+      favorites = JSON.parse(favTemp);
+    }
+    // renderFavorites();
+  }
+  
+  init();
+  
+
 
 /*script for conversation generator box*/
 const generateBtn = document.querySelector("#generate");
@@ -85,14 +99,4 @@ generateBtn.addEventListener("click", (event) => {
             console.log(data.text);
             factEl.textContent = data.text;
         })
-
-
-
-
-
-
-//         }
-        
-//         )
-//     }
-});
+    });
