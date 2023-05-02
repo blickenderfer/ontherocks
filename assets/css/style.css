@@ -81,6 +81,9 @@ background-color: goldenrod;
 }
 
 img{
+    /* display: flex; */
+    padding: 20px;
+    margin:8px;
     height:300px;
     width: 300px;
 }
@@ -89,4 +92,12 @@ img{
 }
 #fave-button{
     background-color:rgb(76, 9, 163) ;
+}
+.drink-grid{
+    justify-content: center;
+    
+}
+
+.flex-column{
+    justify-content: space-between;
 }
