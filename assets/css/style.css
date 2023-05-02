@@ -5,7 +5,7 @@ background: radial-gradient(circle, rgba(21,7,80,1) 0%, rgba(163,64,36,1) 58%, r
 
 h1{
     color: black;
-    
+    text-shadow: 6px 4px 4px white;
     font-size: 80px;
     font-family:'Courier New', Courier, monospace;
     font-weight:bold;
@@ -13,14 +13,17 @@ h1{
     
 }
 
-img{
+.banner{
     width: 100%;
+    height: 100%;
     display: flex;
    
 }
 .favorites-btn{
     padding:6px;
     margin:12px;
+    color: white;
+    /* text-shadow: 2px 2px 3px grey; */
     background-color: rgba(57, 48, 107, 0.897);
     width: 120px;
     height: 100px;
@@ -36,20 +39,19 @@ img{
     color:black;
 }
 p{
-    color:black;
+    color:white;
+    text-shadow: 2px 2px 3px grey;
     font-size: 32px;
     font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-}
-.drink-grid{
-    background-color:rgb(223, 121, 25);
-
+    font-weight: bolder;
 }
 #form-container{
+    text-shadow: 2px 2px 3px grey;
+
     padding:22px;
     background-color: rgb(57, 48, 107, 0.897);
     height:100px;
-    color:black;
+    color:white;
     font-size: 26px;
 }
 #search-bar{
@@ -57,4 +59,18 @@ p{
  height: 30px;
  width: 200px;
  border-radius: 10px;
+}
+#search{
+    background-color: rgb(223, 121, 25);
+    font-weight: bold;
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+}
+.modal-card-body{
+    background-color: rgb(76, 9, 163);
+}
+img{
+    height:150px;
+    width: 150px;
 }
