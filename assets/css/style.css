@@ -94,7 +94,6 @@ background-color: goldenrod;
     font-size: 42px;
     
 }
-
 img{
     /* display: flex; */
     padding: 20px;
@@ -110,10 +109,15 @@ img{
 }
 .drink-grid{
     justify-content: space-between;
+   
     display: flex;
     flex-wrap: wrap;
-    
 }
+.drinks-grid{
+        display: grid;
+        column-gap: 50px;
+      }
+
 
 .flex-column{
     justify-content: space-between;
@@ -155,4 +159,7 @@ h3{
     background-color:grey;
     border-radius: 10px;
     
+}
+.body-box{
+    border: solid white 3px;
 }
