@@ -27,57 +27,64 @@
         <label form="search">What are you in the mood for?</label>
         <input type="search" id="search-bar" name="search" />
         <button type="search" id="search">Search</button>
+        
       </form>
+<div class="fact-container">
+          <div class="notification">
+            <h3 class="containerh3">Break The Ice</h3>
+            <button type="button" id="generate">Generate Conversation Topic</button>
+            <p id="fact"></p>
+          </div>
+        </div>
 
-
-    <div class = "columns is-multiline">
+    <!-- <div class = "columns is-multiline"> -->
       <div class="drinks-grid" class="column is-4">
-      <div class="drink-grid">
+        <div class="columns">
+        <div class="column">
         <h3>Margarita</h3>
-
-
         <a href="#" class="drink-link">
           <img src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg" alt="Margarita" class="searchImg">
         </a>
+         <a href="#" class="drink-link" class="column is-4">
+        </div>
 
-        <a href="#" class="drink-link" class="column is-4">
-
+        <div class="column">
         <h3>Cosmopolitan</h3>
         <a href="#" class="drink-link">
 
           <img src="https://www.thecocktaildb.com/images/media/drink/kpsajh1504368362.jpg" alt="Cosmopolitan" class="searchImg">
-          
         </a>
 
         <a href="#" class="drink-link" class="column is-4">
-
+        </div>
+        <div class="column">
         <h3>Mojito</h3>
         <a href="#" class="drink-link">
 
           <img src="https://www.thecocktaildb.com/images/media/drink/rxtqps1478251029.jpg" alt="Mojito" class="searchImg">
           
         </a>
-
         <a href="#" class="drink-link" class="column is-4">
-
+        </div>
+        </div>
+        <div class="columns">
+          <div class="column">
         <h3>Martini</h3>
         <a href="#" class="drink-link">
-
           <img src="https://www.thecocktaildb.com/images/media/drink/71t8581504353095.jpg" alt="Martini" class="searchImg">
-          
         </a>
+        </div>
 
+        <div class="column">
         <a href="#" class="drink-link" class="column is-4">
-
         <h3>Daiquiri</h3>
         <a href="#" class="drink-link">
-
           <img src="https://www.thecocktaildb.com/images/media/drink/mrz9091589574515.jpg" alt="daiquiri" class="searchImg">
-          
         </a>
+        </div>
 
+        <div class="column">
         <a href="#" class="drink-link" class="column is-4">
-
         <h3>Negroni</h3>
         <a href="#" class="drink-link">
 
@@ -85,14 +92,8 @@
           
         </a>
       </div>
-    </div>
-      <!-- <div class="searchabc-container">
-        <h2>Search for drink alphabetically</h2>
-        <div class="searchabc">
-          <h3>Search by...A B C etc.</h3>
-        </div>
-      </div> -->
- 
+      </div>
+    <!-- </div> -->
 
     <div class="fact-container">
       <div class="notification">
@@ -113,7 +114,6 @@
           <section class="modal-card-body">
             <img id="drink-img" src="" alt="" />
             <div class="drink-description"></div>
-            <div class="image-box"></div>
           </section>
           <footer id="modal-card-foot">
 
