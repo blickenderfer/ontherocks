@@ -2,7 +2,10 @@
 //     console.log(letter.innerHTML)
 //     modal.classList.add("is-active");
 //     var modalTitle = document.querySelector(".modal-card-title");
+
 //     let fetchUrl = `https://thecocktaildb.com/api/json/v1/1/search.php?s=${letter.innerHTML}`
+
+
 //     fetch(fetchUrl)
 //         .then(function (response) {
 //             return response.json();
@@ -23,7 +26,9 @@
 //       console.log(event.target)
 //       modal.classList.add("is-active");
 //       var modalTitle = document.querySelector(".modal-card-title");
+
 //       let fetchUrl = `https://thecocktaildb.com/api/json/v1/1/search.php?s=$a`
+
 //       fetch(fetchUrl)
 //           .then(function (response) {
 //               return response.json();
@@ -31,7 +36,9 @@
 //           .then(function (data) {
 //               console.log(data.drinks);
 //         })
+
 //     });
+
 //   closeBtn.addEventListener("click", () => {
 //       modal.classList.remove("is-active");
 //   });
