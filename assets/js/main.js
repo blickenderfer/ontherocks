@@ -77,7 +77,9 @@ modal.addEventListener("click", (event) => {
     console.log(event.target);
     if (event.target.matches(".fave-button")) {
         console.log("click fave");
-        favorites.push(event.target.dataset.drink);
+        var modalTitle = document.querySelector(".modal-card-title");
+        console.log(modalTitle.textContent);
+        favorites.push(modalTitle.textContent);
         localStorage.setItem("favoriteDrinks", JSON.stringify(favorites));
     }
     // renderFavorites();
@@ -115,8 +117,8 @@ function renderFavorites(){
         drinkBtn.textContent=favorites[i];
        
         drinkBtn.addEventListener("click", (event) => {
-            console.log(drinkBtn.textContent);
-            imgSearch(drinkBtn.textContent);
+            console.log(event.target.innerHTML);
+            imgSearch(event.target.innerHTML);
         } 
         
         )
