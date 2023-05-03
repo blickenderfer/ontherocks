@@ -1,16 +1,15 @@
-// order an array of objects with name
-// users.sort(function (a, b) {
-//     if (a.name < b.name) {
-//       return -1;
-//     }
-//     if (a.name > b.name) {
-//       return 1;
-//     }
-//     return 0;
-//   });
-
-function makeList(){
-    document.getElementById("")
+function makeList(letter){
+    console.log(letter.innerHTML)
+    modal.classList.add("is-active");
+    var modalTitle = document.querySelector(".modal-card-title");
+    let fetchUrl = `https://thecocktaildb.com/api/json/v1/1/search.php?s=${letter.innerHTML}`
+    fetch(fetchUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data.drinks);
+      })
 }
 
 var listBtn = document.querySelector(".list");
@@ -21,9 +20,10 @@ var cancelBtn = document.querySelector("#cancel");
   
   listBtn.addEventListener("click", (event) => {
       event.preventDefault();
+      console.log(event.target)
       modal.classList.add("is-active");
       var modalTitle = document.querySelector(".modal-card-title");
-      let fetchUrl = `https://thecocktaildb.com/api/json/v1/1/search.php?s=${}`
+      let fetchUrl = `https://thecocktaildb.com/api/json/v1/1/search.php?s=$a`
       fetch(fetchUrl)
           .then(function (response) {
               return response.json();
